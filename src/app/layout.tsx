@@ -2,7 +2,7 @@ import './globals.css';
 import type { Metadata, Viewport } from 'next';
 
 export const metadata: Metadata = { title: 'Rerise', description: 'Strength plans and coaching, in one private place.' };
-export const viewport: Viewport = { width: 'device-width', initialScale: 1 };
+export const viewport: Viewport = { width: 'device-width', initialScale: 1, themeColor: '#9C3E63' };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (

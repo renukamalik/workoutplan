@@ -1,5 +1,10 @@
 'use client';
 import { useActionState, useState } from 'react';
+import { Sparkles } from 'lucide-react';
+import { Button } from './ui/button';
+import { Card } from './ui/card';
+import { Textarea } from './ui/textarea';
+import { Label } from './ui/label';
 import { createPlanAction } from '@/app/(coach)/create/actions';
 
 type C = { id: string; name: string; goal: string; plan_length: string };
@@ -10,9 +15,9 @@ export default function CreatePlanForm({ clients, templates, aiReady }: { client
   const [source, setSource] = useState(templates[0] ? 't:' + templates[0].id : 'ai');
   const [client, setClient] = useState(clients[0]?.id ?? '');
   const c = clients.find((x) => x.id === client);
-  if (clients.length === 0) return <section className="card"><p>Add a client first, then come back here.</p></section>;
+  if (clients.length === 0) return <Card><p>Add a client first, then come back here.</p></Card>;
   return (
-    <form action={act} className="card" style={{ maxWidth: 720 }}>
+    <Card className="max-w-3xl"><form action={act} className="flex flex-col gap-4">
       <h3>1. Who is it for</h3>
       <label className="fld">Client
         <select name="client" value={client} onChange={(e) => setClient(e.target.value)}>{clients.map((x) => <option key={x.id} value={x.id}>{x.name}</option>)}</select></label>
@@ -46,8 +51,8 @@ export default function CreatePlanForm({ clients, templates, aiReady }: { client
       )}
       {state?.error && <p className="notice err" role="alert">{state.error}</p>}
       <div className="row">
-        <button className="btn primary" disabled={pending}>{pending ? (source === 'ai' ? 'Claude is writing... about a minute' : 'Creating...') : 'Create plan'}</button>
+        <Button size="lg" className="w-full sm:w-auto" disabled={pending}><Sparkles />{pending ? (source === 'ai' ? 'Claude is writing... about a minute' : 'Creating...') : 'Create plan'}</Button>
       </div>
-    </form>
+    </form></Card>
   );
 }

@@ -8,7 +8,7 @@ You are my developer and product partner for the Rerise coaching app.
 
 About me: I am Renuka, a fitness and nutrition coach for women aged 40+ in Delhi NCR. I am not a developer, so explain things in plain English, give exact steps, and tell me what to click.
 
-The app: https://rerise-app.onrender.com/ . Code: GitHub renukamalik/workoutplan (branch main). Next.js 15, React 19, TypeScript. Database: Neon Postgres. Hosting: Render (free plan, sleeps when idle).
+The app: https://rerise-app.onrender.com/ . Code: GitHub renukamalik/workoutplan (branch main). Next.js 15, React 19, TypeScript, Tailwind v4 with shadcn/ui components (src/components/ui). Mobile first: bottom tab bar on phones, sidebar on desktop. Database: Neon Postgres. Hosting: Render (free plan, sleeps when idle).
 
 What it does:
 - Coach login (me) and client login. Temporary password, forced change at first login.
@@ -37,4 +37,4 @@ Known gaps and ideas:
 1. Design canvas for the app screens.
 2. Full app: logins, clients, plans, send, admin, dashboard, client area (tick exercises, weekly check-in, profile).
 3. Free Render plan, Neon database connected.
-4. Create plan tab, server-made PDF, signed 60-day PDF links, WhatsApp and email sending, Claude plan writing, plan revision and weekly briefing.
+4. Create plan tab, server-made PDF, short private 60-day PDF links (/p/<code>), WhatsApp and email sending, Claude plan writing, plan revision and weekly briefing.

@@ -28,7 +28,7 @@ export default function PlanEditor({ id, title: t0, kind: k0, data: d0, aiReady 
           <label className="fld" style={{ flex: '1 1 120px' }}>Week<input value={d.week} onChange={(e) => edit((n) => { n.week = e.target.value; })} /></label>
           <label className="fld" style={{ flex: '1 1 160px' }}>Phase<input value={d.phase} onChange={(e) => edit((n) => { n.phase = e.target.value; })} /></label>
         </div>
-        <div className="row">
+        <div className="row savebar">
           <button className="btn primary" onClick={save} disabled={pending || !dirty}>{pending ? 'Saving...' : 'Save plan'}</button>
           <span className="small muted" aria-live="polite">{dirty ? 'Unsaved changes' : msg}</span>
         </div>

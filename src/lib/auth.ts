@@ -1,5 +1,6 @@
 import { SignJWT, jwtVerify } from 'jose';
 import { cookies } from 'next/headers';
+import { randomBytes } from 'crypto';
 import { redirect } from 'next/navigation';
 import { q } from './db';
 
@@ -59,10 +60,11 @@ export function tempPassword() {
 export const appUrl = () =>
   (process.env.APP_URL || (process.env.NODE_ENV === 'production' ? 'https://rerise-app.onrender.com' : 'http://localhost:3000')).replace(/\/$/, '');
 
-// Signed link so a client can open her PDF from WhatsApp or email without logging in. Valid 60 days.
-export async function planToken(planId: string) {
-  return new SignJWT({ k: 'plan-pdf' }).setProtectedHeader({ alg: 'HS256' }).setSubject(planId).setIssuedAt().setExpirationTime('60d').sign(secret());
-}
-export async function planIdFromToken(t: string): Promise<string | null> {
-  try { const { payload } = await jwtVerify(t, secret()); return payload.k === 'plan-pdf' && payload.sub ? payload.sub : null; } catch { return null; }
+// Short private link for a client's PDF (for example /p/k3x9a1b2cd). Valid 60 days, renewed when the coach opens the plan after it expires.
+export async function shareCode(planId: string): Promise<string> {
+  const [p] = await q<any>(`SELECT share_code, share_expires FROM plans WHERE id=$1`, [planId]);
+  if (p?.share_code && p.share_expires && new Date(p.share_expires) > new Date(Date.now() + 5 * 864e5)) return p.share_code;
+  const code = p?.share_code && p.share_expires && new Date(p.share_expires) > new Date() ? p.share_code : randomBytes(8).toString('base64url').replace(/[-_]/g, 'x').slice(0, 10).toLowerCase();
+  await q(`UPDATE plans SET share_code=$1, share_expires=now() + interval '60 days' WHERE id=$2`, [code, planId]);
+  return code;
 }

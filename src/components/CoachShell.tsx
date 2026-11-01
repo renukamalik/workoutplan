@@ -1,33 +1,12 @@
-import Link from 'next/link';
 import Logo from './Logo';
-import { logoutAction } from '@/app/login/actions';
+import CoachNav from './CoachNav';
 import type { Session } from '@/lib/auth';
-
-const items = [
-  { href: '/dashboard', label: 'Dashboard' },
-  { href: '/clients', label: 'Clients' },
-  { href: '/create', label: 'Create plan' },
-  { href: '/plans', label: 'Plans' },
-  { href: '/send', label: 'Send plans' },
-  { href: '/admin', label: 'Admin' },
-];
 
 export default function CoachShell({ session, active, children }: { session: Session; active: string; children: React.ReactNode }) {
   return (
-    <div className="shell">
-      <aside className="side">
-        <Logo />
-        <nav className="nav" aria-label="Main">
-          {items.map((i) => (
-            <Link key={i.href} href={i.href} className={active === i.href ? 'on' : ''}>{i.label}</Link>
-          ))}
-        </nav>
-        <div className="who">
-          <div><b>{session.name}</b><div className="small muted">Coach account</div></div>
-          <form action={logoutAction}><button className="btn sm" style={{ width: '100%' }}>Log out</button></form>
-        </div>
-      </aside>
-      <main className="main">{children}</main>
+    <div className="min-h-screen md:flex">
+      <CoachNav name={session.name} active={active} />
+      <main className="mx-auto flex w-full min-w-0 max-w-[1280px] flex-1 flex-col gap-5 px-4 pb-28 pt-5 md:px-8 md:pb-10 md:pt-7">{children}</main>
     </div>
   );
 }

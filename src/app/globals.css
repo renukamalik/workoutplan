@@ -1,3 +1,28 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+/* shadcn/ui tokens, mapped to the Rerise palette */
+@theme inline {
+  --color-background: var(--bg);
+  --color-foreground: var(--ink);
+  --color-card: var(--surface);
+  --color-card-foreground: var(--ink);
+  --color-primary: var(--accent);
+  --color-primary-foreground: var(--accent-ink);
+  --color-secondary: var(--pill);
+  --color-secondary-foreground: var(--ink);
+  --color-muted: var(--pill);
+  --color-muted-foreground: var(--muted);
+  --color-destructive: var(--alert);
+  --color-border: var(--line);
+  --color-input: var(--field);
+  --color-ring: var(--accent);
+  --font-sans: var(--body);
+  --font-display: var(--display);
+}
+
+/* The original Rerise styles sit in the components layer, so Tailwind utilities and shadcn components always win over them. */
+@layer components {
 :root{
   --bg:#FBF4F2; --surface:#fff; --band:#F2DAD5; --ink:#2B1B2E; --muted:#6F5A65; --line:#EAD6D1; --field:#D9BDB6;
   --accent:#9C3E63; --accent-ink:#fff; --pill:#F5E7E4; --ok:#25593F; --ok-bg:#DDEFE5; --warn:#6B4708; --warn-bg:#FBE9C6;
@@ -71,3 +96,24 @@ tr:last-child td{border-bottom:0}
 .edgrid{display:grid;gap:8px;grid-template-columns:repeat(4,minmax(0,1fr));grid-column:2/4}
 @media (max-width:640px){.main{padding:20px 16px}.edgrid{grid-template-columns:repeat(2,minmax(0,1fr))}.ex{grid-template-columns:28px minmax(0,1fr)}.ex .pills{grid-column:2}.cue,.vid,.edgrid{grid-column:1/3}h1{font-size:34px}}
 @media print{.side,.noprint{display:none!important}.main{padding:0}body{background:#fff}.day{break-inside:avoid}}
+
+
+/* Mobile polish */
+@media (max-width:767px){
+  input,select,textarea{font-size:16px!important}
+  h1{font-size:32px}
+  .card{padding:16px}
+  .btn{min-height:46px}
+  .grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+  .stat b{font-size:34px}
+  .savebar{position:sticky;bottom:76px;z-index:20;background:var(--surface);padding:10px 12px;border:1px solid var(--line);border-radius:14px;box-shadow:0 8px 24px rgba(43,27,46,.16)}
+  .login .brand{flex:1 1 auto;padding:24px 20px;gap:18px}
+  .login .brand h1{font-size:30px}
+  .login .brand p{display:none}
+  .login .brand{gap:12px}
+  .login .form{flex:1 1 auto;align-items:flex-start;padding:24px 16px 40px}
+  .dayhead{padding:12px 14px}.ex{padding:14px}
+  .tablewrap{border-radius:14px}
+  th,td{padding:10px 10px}
+}
+}

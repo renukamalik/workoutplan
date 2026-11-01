@@ -102,6 +102,9 @@ CREATE TABLE IF NOT EXISTS sends (
   status TEXT NOT NULL DEFAULT 'sent',
   created_at TIMESTAMPTZ NOT NULL DEFAULT now()
 );
+ALTER TABLE plans ADD COLUMN IF NOT EXISTS share_code TEXT;
+ALTER TABLE plans ADD COLUMN IF NOT EXISTS share_expires TIMESTAMPTZ;
+CREATE UNIQUE INDEX IF NOT EXISTS plans_share_code_idx ON plans(share_code);
 `;
 
 async function init(r: Runner) {
