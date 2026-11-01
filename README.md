@@ -20,7 +20,7 @@ With no `DATABASE_URL`, data is kept in a local folder (`.data`). Open http://lo
 4. Open the address and log in as the coach. Tables and your first template plan are created on first start.
 5. Optional: add `RESEND_API_KEY` and `EMAIL_FROM` to send emails from the app. Without them, the Email buttons open your own email app.
 
-The free Render plan sleeps when idle. The `starter` plan in `render.yaml` stays awake.
+`render.yaml` uses the free Render plan, which sleeps when idle (the first visit then takes about a minute). Change `plan: free` to `plan: starter` to keep it awake.
 
 ## Good to know
 - Passwords are stored scrambled (bcrypt). Nobody can read them. Reset gives a new temporary password.
