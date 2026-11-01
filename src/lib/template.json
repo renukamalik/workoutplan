@@ -1,0 +1,476 @@
+{
+ "week": "1 of 4",
+ "phase": "Foundation",
+ "days": [
+  {
+   "id": "d0",
+   "name": "Opener",
+   "tag": "Before every strength day",
+   "focus": "8 minutes. Breathing, neck and hip activation.",
+   "note": "",
+   "items": [
+    {
+     "id": "e01",
+     "name": "Lying 90/90 breathing (calves on a chair)",
+     "tag": "Breathing",
+     "sets": "1",
+     "reps": "6-8 breaths",
+     "rest": "-",
+     "cue": "Breathe low into ribs and belly. Long, relaxed breath out. No squeezing.",
+     "video": ""
+    },
+    {
+     "id": "e02",
+     "name": "Standing chin tucks",
+     "tag": "Deep neck",
+     "sets": "1-2",
+     "reps": "8-10",
+     "rest": "20s",
+     "cue": "Stand tall with your back and head against a wall. Glide the chin straight back, like making a double chin. Hold 2 seconds, release.",
+     "video": ""
+    },
+    {
+     "id": "e03",
+     "name": "Glute bridge",
+     "tag": "Glutes",
+     "sets": "1-2",
+     "reps": "8-10",
+     "rest": "20s",
+     "cue": "Press through heels and lift until hips are level. Ribs stay down.",
+     "video": ""
+    },
+    {
+     "id": "e05",
+     "name": "Standing march",
+     "tag": "Hips and core",
+     "sets": "1-2",
+     "reps": "30 seconds",
+     "rest": "-",
+     "cue": "Tall posture, slow knee lift, no leaning back. Keep marching for the full 30 seconds.",
+     "video": ""
+    }
+   ]
+  },
+  {
+   "id": "d1",
+   "name": "Monday",
+   "tag": "Lower A",
+   "focus": "Legs, hips and calves. Squat focus.",
+   "note": "Month progression: start at the low end of sets and reps, add reps first, then add a set. Move up only when every rep feels controlled.",
+   "items": [
+    {
+     "id": "m11",
+     "name": "Hip 90/90",
+     "tag": "Hip rotation mobility",
+     "sets": "1-2",
+     "reps": "6 each side",
+     "rest": "-",
+     "cue": "Sit on a cushion with both knees bent at 90 degrees, one in front and one to the side. Gently rotate the knees from side to side, tall spine, no forcing.",
+     "video": ""
+    },
+    {
+     "id": "m12",
+     "name": "Quadruped knee circles",
+     "tag": "Hip mobility",
+     "sets": "1-2",
+     "reps": "8 each direction, each leg",
+     "rest": "-",
+     "cue": "On hands and knees, lift one knee slightly and draw slow circles. Keep the trunk still and the movement pain-free.",
+     "video": ""
+    },
+    {
+     "id": "e11",
+     "name": "Squat",
+     "tag": "Quads and glutes",
+     "sets": "1-3",
+     "reps": "8-12",
+     "rest": "60s",
+     "cue": "Start with 1 set and add sets as it feels easy. Sit back to a chair as a depth guide, then stand up as you breathe out.",
+     "video": ""
+    },
+    {
+     "id": "e12",
+     "name": "Hip hinge",
+     "tag": "Glutes and hamstrings",
+     "sets": "1-3",
+     "reps": "6-10",
+     "rest": "60s",
+     "cue": "Push hips back, flat back, long neck. Go only as deep as stays pain-free. Same exercise on Monday and Thursday. Over the month, build from 1 set of 6 reps to 3 sets of 10.",
+     "video": ""
+    },
+    {
+     "id": "e14",
+     "name": "Side-lying hip abduction",
+     "tag": "Side hips",
+     "sets": "1-3",
+     "reps": "10-12 each side",
+     "rest": "45s",
+     "cue": "Lie on your side, hips stacked, top leg slightly behind you. Lift the leg without rolling backward.",
+     "video": ""
+    },
+    {
+     "id": "e17",
+     "name": "Calf raises",
+     "tag": "Calves",
+     "sets": "2-3",
+     "reps": "12-15",
+     "rest": "30s",
+     "cue": "Hold a wall or counter. Rise slowly onto the toes, pause, lower for 3 seconds.",
+     "video": ""
+    },
+    {
+     "id": "e18",
+     "name": "Toe raises",
+     "tag": "Shins",
+     "sets": "2-3",
+     "reps": "12-15",
+     "rest": "30s",
+     "cue": "Back against a wall, heels on the floor. Lift the toes toward the shins, lower slowly.",
+     "video": ""
+    },
+    {
+     "id": "e16",
+     "name": "Side plank (on knees)",
+     "tag": "Side trunk",
+     "sets": "1-3",
+     "reps": "15-30s each side",
+     "rest": "30s",
+     "cue": "Line from knees to head. Breathe out, do not hold your breath.",
+     "video": ""
+    }
+   ]
+  },
+  {
+   "id": "d2",
+   "name": "Tuesday",
+   "tag": "Upper A",
+   "focus": "Chest, back, shoulders and arms. Press focus.",
+   "note": "Month progression: start at the low end of sets and reps, add reps first, then add a set. Move up only when every rep feels controlled.",
+   "items": [
+    {
+     "id": "m21",
+     "name": "Shoulder dislocates (band or broomstick)",
+     "tag": "Shoulder mobility",
+     "sets": "1-2",
+     "reps": "8-10",
+     "rest": "-",
+     "cue": "Wide grip, arms straight. Lift the band overhead and as far behind as is comfortable, then return. Widen the grip if it pinches.",
+     "video": ""
+    },
+    {
+     "id": "m22",
+     "name": "Shoulder internal and external rotation (elbow at side)",
+     "tag": "Rotator cuff mobility",
+     "sets": "1-2",
+     "reps": "8-10 each direction",
+     "rest": "-",
+     "cue": "Elbow bent 90 degrees and tucked to your side. Rotate the forearm inward, then outward, with a light band or no weight.",
+     "video": ""
+    },
+    {
+     "id": "e27",
+     "name": "Lying dumbbell chest press",
+     "tag": "Chest and triceps",
+     "sets": "2-3",
+     "reps": "8-12",
+     "rest": "60s",
+     "cue": "Lie on a bed or bench with knees bent, feet flat. Press the 5 kg dumbbells up, lower slowly. Keep ribs down.",
+     "video": ""
+    },
+    {
+     "id": "e15",
+     "name": "Band row to the hip (Weeks 1-2), then supported single-arm dumbbell row (Weeks 3-4)",
+     "tag": "Back and lats",
+     "sets": "2-3",
+     "reps": "8-12",
+     "rest": "45s",
+     "cue": "Elbows travel back, shoulder blades glide down and together. From Week 3 use your 5 kg dumbbell, one arm at a time.",
+     "video": ""
+    },
+    {
+     "id": "e46",
+     "name": "Standing dumbbell lateral raise (light)",
+     "tag": "Shoulders",
+     "sets": "1-3",
+     "reps": "10-15",
+     "rest": "45s",
+     "cue": "Slight bend in the elbows, lift to shoulder height, lower slowly. Do not shrug.",
+     "video": ""
+    },
+    {
+     "id": "e48",
+     "name": "Dumbbell triceps extension (seated or standing)",
+     "tag": "Triceps",
+     "sets": "1-3",
+     "reps": "10-12",
+     "rest": "45s",
+     "cue": "Hold one dumbbell with both hands overhead, bend the elbows slowly behind the head, ribs down.",
+     "video": ""
+    },
+    {
+     "id": "e28",
+     "name": "IYTW raises",
+     "tag": "Shoulders and upper back",
+     "sets": "1-2",
+     "reps": "6-8 each letter",
+     "rest": "45s",
+     "cue": "Stand with your chest against a wall or lie face down on a bench. Light weights or none. Move slowly, shoulder blades down.",
+     "video": ""
+    }
+   ]
+  },
+  {
+   "id": "d3",
+   "name": "Wednesday",
+   "tag": "Core and low back",
+   "focus": "Trunk strength, then an easy walk.",
+   "note": "Month progression: start at the low end of sets and reps, add reps first, then add a set. Move up only when every rep feels controlled.",
+   "items": [
+    {
+     "id": "m31",
+     "name": "Hip airplane (supported, small range)",
+     "tag": "Hip rotation and control",
+     "sets": "1-2",
+     "reps": "5 each side",
+     "rest": "-",
+     "cue": "Hold a wall or counter. Hinge only a little on one leg and rotate the hips open and closed slowly. Keep it small and pain-free.",
+     "video": ""
+    },
+    {
+     "id": "e52",
+     "name": "Dead bug (single leg)",
+     "tag": "Deep core",
+     "sets": "2-3",
+     "reps": "6-10 each side",
+     "rest": "30s",
+     "cue": "Lower one leg at a time. Low back stays gently down. Breathe out as the leg lowers.",
+     "video": ""
+    },
+    {
+     "id": "e53",
+     "name": "Bird dog",
+     "tag": "Back and hips",
+     "sets": "2-3",
+     "reps": "6-10 each side",
+     "rest": "30s",
+     "cue": "Opposite arm and leg, hips level, reach long, no rushing.",
+     "video": ""
+    },
+    {
+     "id": "e57",
+     "name": "Side plank (on knees)",
+     "tag": "Side trunk",
+     "sets": "1-3",
+     "reps": "15-30s each side",
+     "rest": "30s",
+     "cue": "Line from knees to head. Breathe out, do not hold your breath.",
+     "video": ""
+    },
+    {
+     "id": "e56",
+     "name": "Prone back lift (small range)",
+     "tag": "Low back",
+     "sets": "1-2",
+     "reps": "6-10",
+     "rest": "30s",
+     "cue": "Lie face down with a pillow under the hips. Lift the chest slightly, only a few centimetres. Stop if leg symptoms appear.",
+     "video": ""
+    },
+    {
+     "id": "e51",
+     "name": "Easy walk",
+     "tag": "Active recovery",
+     "sets": "1",
+     "reps": "15-30 min",
+     "rest": "-",
+     "cue": "Talking pace. Relaxed shoulders, eyes forward.",
+     "video": ""
+    }
+   ]
+  },
+  {
+   "id": "d4",
+   "name": "Thursday",
+   "tag": "Lower B",
+   "focus": "Legs, hips and calves. Hinge focus.",
+   "note": "Month progression: start at the low end of sets and reps, add reps first, then add a set. Move up only when every rep feels controlled.",
+   "items": [
+    {
+     "id": "m41",
+     "name": "Hip 90/90",
+     "tag": "Hip rotation mobility",
+     "sets": "1-2",
+     "reps": "6 each side",
+     "rest": "-",
+     "cue": "Sit on a cushion with both knees bent at 90 degrees, one in front and one to the side. Gently rotate the knees from side to side, tall spine, no forcing.",
+     "video": ""
+    },
+    {
+     "id": "m42",
+     "name": "Quadruped knee circles",
+     "tag": "Hip mobility",
+     "sets": "1-2",
+     "reps": "8 each direction, each leg",
+     "rest": "-",
+     "cue": "On hands and knees, lift one knee slightly and draw slow circles. Keep the trunk still and the movement pain-free.",
+     "video": ""
+    },
+    {
+     "id": "e42",
+     "name": "Hip hinge",
+     "tag": "Glutes and hamstrings",
+     "sets": "1-3",
+     "reps": "6-10",
+     "rest": "60s",
+     "cue": "Push hips back, flat back, long neck. Go only as deep as stays pain-free. Same exercise on Monday and Thursday. Over the month, build from 1 set of 6 reps to 3 sets of 10.",
+     "video": ""
+    },
+    {
+     "id": "e41",
+     "name": "Supported split squat (shallow)",
+     "tag": "Quads and glutes",
+     "sets": "1-3",
+     "reps": "6-10 each side",
+     "rest": "60s",
+     "cue": "Hold a rail or counter. Short step, go down only a little. Front knee over the ankle.",
+     "video": ""
+    },
+    {
+     "id": "e13",
+     "name": "Glute bridge",
+     "tag": "Glutes",
+     "sets": "2-3",
+     "reps": "8-12",
+     "rest": "45s",
+     "cue": "Pause 2 seconds at the top. Feel it in the glutes, not the low back.",
+     "video": ""
+    },
+    {
+     "id": "e19",
+     "name": "Side-lying hip abduction",
+     "tag": "Side hips",
+     "sets": "1-3",
+     "reps": "10-12 each side",
+     "rest": "45s",
+     "cue": "Lie on your side, hips stacked, top leg slightly behind you. Lift the leg without rolling backward.",
+     "video": ""
+    },
+    {
+     "id": "e1a",
+     "name": "Calf raises",
+     "tag": "Calves",
+     "sets": "2-3",
+     "reps": "12-15",
+     "rest": "30s",
+     "cue": "Hold a wall or counter. Rise slowly onto the toes, pause, lower for 3 seconds.",
+     "video": ""
+    },
+    {
+     "id": "e1b",
+     "name": "Toe raises",
+     "tag": "Shins",
+     "sets": "2-3",
+     "reps": "12-15",
+     "rest": "30s",
+     "cue": "Back against a wall, heels on the floor. Lift the toes toward the shins, lower slowly.",
+     "video": ""
+    }
+   ]
+  },
+  {
+   "id": "d5",
+   "name": "Friday",
+   "tag": "Upper B",
+   "focus": "Shoulders, chest, back and arms. Posture focus.",
+   "note": "Month progression: start at the low end of sets and reps, add reps first, then add a set. Move up only when every rep feels controlled.",
+   "items": [
+    {
+     "id": "m51",
+     "name": "Shoulder dislocates (band or broomstick)",
+     "tag": "Shoulder mobility",
+     "sets": "1-2",
+     "reps": "8-10",
+     "rest": "-",
+     "cue": "Wide grip, arms straight. Lift the band overhead and as far behind as is comfortable, then return. Widen the grip if it pinches.",
+     "video": ""
+    },
+    {
+     "id": "m52",
+     "name": "Shoulder internal and external rotation (elbow at side)",
+     "tag": "Rotator cuff mobility",
+     "sets": "1-2",
+     "reps": "8-10 each direction",
+     "rest": "-",
+     "cue": "Elbow bent 90 degrees and tucked to your side. Rotate the forearm inward, then outward, with a light band or no weight.",
+     "video": ""
+    },
+    {
+     "id": "e44",
+     "name": "Standing dumbbell press",
+     "tag": "Shoulders and triceps",
+     "sets": "2-3",
+     "reps": "6-10",
+     "rest": "60s",
+     "cue": "Feet hip-width, soft knees, ribs down. Press up and slightly forward, no arching.",
+     "video": ""
+    },
+    {
+     "id": "e29",
+     "name": "Counter push-up (hands on kitchen counter)",
+     "tag": "Chest and triceps",
+     "sets": "2-3",
+     "reps": "6-12",
+     "rest": "60s",
+     "cue": "Body in one line, elbows about 45 degrees from the body, chin slightly tucked.",
+     "video": ""
+    },
+    {
+     "id": "e5a",
+     "name": "Band row to the hip (Weeks 1-2), then supported single-arm dumbbell row (Weeks 3-4)",
+     "tag": "Back and lats",
+     "sets": "2-3",
+     "reps": "8-12",
+     "rest": "45s",
+     "cue": "Elbows travel back, shoulder blades glide down and together. From Week 3 use your 5 kg dumbbell, one arm at a time.",
+     "video": ""
+    },
+    {
+     "id": "e23",
+     "name": "Mini-band shoulder external rotation",
+     "tag": "Rotator cuff and rear shoulders",
+     "sets": "2-3",
+     "reps": "10-15 each side",
+     "rest": "45s",
+     "cue": "Elbow tucked at your side, band around the wrists. Rotate the forearm outward, keep the shoulder relaxed.",
+     "video": ""
+    },
+    {
+     "id": "e47",
+     "name": "Dumbbell biceps curl",
+     "tag": "Biceps",
+     "sets": "1-3",
+     "reps": "10-12",
+     "rest": "45s",
+     "cue": "Elbows stay by your sides. Curl up, lower slowly, no swinging.",
+     "video": ""
+    }
+   ]
+  },
+  {
+   "id": "d6",
+   "name": "Saturday",
+   "tag": "Steps",
+   "focus": "Easy walking, flexible timing.",
+   "note": "Aim for 6,000 to 8,000 steps today. Split them across the day if that feels better.",
+   "items": []
+  },
+  {
+   "id": "d7",
+   "name": "Sunday",
+   "tag": "Rest",
+   "focus": "Full rest, sleep and good food.",
+   "note": "Fill in your weekly check-in and send it to me before Monday.",
+   "items": []
+  }
+ ]
+}
