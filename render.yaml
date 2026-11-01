@@ -16,8 +16,12 @@ services:
       - key: ADMIN_PASSWORD
         sync: false
       - key: APP_URL
-        sync: false
+        value: https://rerise-app.onrender.com
       - key: RESEND_API_KEY
         sync: false
       - key: EMAIL_FROM
         sync: false
+      - key: ANTHROPIC_API_KEY
+        sync: false
+      - key: ANTHROPIC_MODEL
+        value: claude-sonnet-5-5

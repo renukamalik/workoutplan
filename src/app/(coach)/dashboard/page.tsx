@@ -1,5 +1,7 @@
 import Link from 'next/link';
 import { q } from '@/lib/db';
+import { aiReady } from '@/lib/ai';
+import BriefingCard from '@/components/BriefingCard';
 
 export default async function Dashboard() {
   const [c] = await q<any>(`SELECT
@@ -25,6 +27,7 @@ export default async function Dashboard() {
   return (
     <>
       <div><h1>Dashboard</h1><p className="muted">Who needs you this week, at a glance.</p></div>
+      <BriefingCard aiReady={aiReady()} />
       <div className="grid">
         <div className="stat"><span>Clients</span><b>{c.total}</b></div>
         <div className="stat"><span>Active</span><b>{c.active}</b></div>

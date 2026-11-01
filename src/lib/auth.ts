@@ -56,4 +56,13 @@ export function tempPassword() {
   return `${w}-${n}-${c}`;
 }
 
-export const appUrl = () => (process.env.APP_URL || 'http://localhost:3000').replace(/\/$/, '');
+export const appUrl = () =>
+  (process.env.APP_URL || (process.env.NODE_ENV === 'production' ? 'https://rerise-app.onrender.com' : 'http://localhost:3000')).replace(/\/$/, '');
+
+// Signed link so a client can open her PDF from WhatsApp or email without logging in. Valid 60 days.
+export async function planToken(planId: string) {
+  return new SignJWT({ k: 'plan-pdf' }).setProtectedHeader({ alg: 'HS256' }).setSubject(planId).setIssuedAt().setExpirationTime('60d').sign(secret());
+}
+export async function planIdFromToken(t: string): Promise<string | null> {
+  try { const { payload } = await jwtVerify(t, secret()); return payload.k === 'plan-pdf' && payload.sub ? payload.sub : null; } catch { return null; }
+}

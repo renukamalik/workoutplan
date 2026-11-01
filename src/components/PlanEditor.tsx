@@ -1,12 +1,14 @@
 'use client';
 import { useState, useTransition } from 'react';
 import type { PlanData, Item } from '@/lib/plan';
-import { savePlanAction } from '@/app/(coach)/plans/actions';
+import { savePlanAction, revisePlanAction } from '@/app/(coach)/plans/actions';
 
 const BANK = ['Squat','Hip hinge','Side-lying hip abduction','Calf raises','Toe raises','Glute bridge','Supported split squat (shallow)','Lying dumbbell chest press','Standing dumbbell press','Standing dumbbell lateral raise (light)','Dumbbell triceps extension','Dumbbell biceps curl','Band row to the hip','Supported single-arm dumbbell row','IYTW raises','Mini-band shoulder external rotation','Counter push-up','Dead bug (single leg)','Bird dog','Side plank (on knees)','Prone back lift (small range)','Easy walk','Hip 90/90','Quadruped knee circles','Hip airplane (supported, small range)','Shoulder dislocates (band or broomstick)','Shoulder internal and external rotation','Standing chin tucks','Lying 90/90 breathing'];
 const uid = () => Math.random().toString(36).slice(2, 10);
 
-export default function PlanEditor({ id, title: t0, kind: k0, data: d0 }: { id: string; title: string; kind: string; data: PlanData }) {
+export default function PlanEditor({ id, title: t0, kind: k0, data: d0, aiReady }: { id: string; title: string; kind: string; data: PlanData; aiReady?: boolean }) {
+  const [ask, setAsk] = useState('');
+  const [askMsg, setAskMsg] = useState('');
   const [title, setTitle] = useState(t0);
   const [kind, setKind] = useState(k0);
   const [d, setD] = useState<PlanData>(d0);
@@ -31,6 +33,16 @@ export default function PlanEditor({ id, title: t0, kind: k0, data: d0 }: { id: 
           <span className="small muted" aria-live="polite">{dirty ? 'Unsaved changes' : msg}</span>
         </div>
       </div>
+      {aiReady && (
+        <div className="card">
+          <h3>Ask Claude to change this plan</h3>
+          <div className="row">
+            <input className="in" style={{ flex: '1 1 320px' }} value={ask} onChange={(e) => setAsk(e.target.value)} aria-label="What should Claude change" placeholder="Example: swap the squat for a supported split squat on Monday and add shoulder mobility on Thursday" />
+            <button className="btn" disabled={pending || !ask.trim()} onClick={() => start(async () => { setAskMsg('Claude is working...'); const r: any = await revisePlanAction(d, ask); if (r.data) { setD(r.data); setDirty(true); setAsk(''); setAskMsg('Done. Check the changes, then press Save plan.'); } else setAskMsg(r.error); })}>Change with Claude</button>
+          </div>
+          {askMsg && <p className="small muted" role="status">{askMsg}</p>}
+        </div>
+      )}
       <datalist id="bank">{BANK.map((b) => <option key={b} value={b} />)}</datalist>
       {d.days.map((day, di) => (
         <section className="day" key={day.id}>

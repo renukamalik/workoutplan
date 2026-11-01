@@ -18,3 +18,19 @@ export function waLink(phone: string, text: string) {
 export function fillTemplate(text: string, vars: Record<string, string>) {
   return text.replace(/\{(\w+)\}/g, (_, k) => vars[k] ?? `{${k}}`);
 }
+
+const t = (v: unknown, n = 600) => String(v ?? '').slice(0, n);
+const rid = () => Math.random().toString(36).slice(2, 10);
+
+// Makes sure any plan data (typed by the coach or written by Claude) has the right shape.
+export function cleanPlan(data: any): PlanData {
+  return {
+    week: t(data?.week, 40), phase: t(data?.phase, 60),
+    days: (Array.isArray(data?.days) ? data.days : []).slice(0, 14).map((d: any) => ({
+      id: t(d?.id, 20) || rid(), name: t(d?.name, 60), tag: t(d?.tag, 80), focus: t(d?.focus, 300), note: t(d?.note, 600),
+      items: (Array.isArray(d?.items) ? d.items : []).slice(0, 30).map((i: any) => ({
+        id: t(i?.id, 20) || rid(), name: t(i?.name, 120), tag: t(i?.tag, 60), sets: t(i?.sets, 20), reps: t(i?.reps, 40), rest: t(i?.rest, 20), cue: t(i?.cue, 500), video: t(i?.video, 300),
+      })),
+    })),
+  };
+}

@@ -27,3 +27,18 @@ With no `DATABASE_URL`, data is kept in a local folder (`.data`). Open http://lo
 - WhatsApp opens one chat at a time with the message ready. Fully automatic WhatsApp sending needs the paid WhatsApp Business service.
 - Download a full backup from Admin regularly. It contains health notes, so keep it private.
 - Client health data needs her consent. The Add client form records it.
+
+## Create plan, PDF and sending
+- **Create plan** tab: pick a client, start from a template or "Write with Claude", edit, press Save plan, then use the Send panel at the bottom.
+- The PDF is made on the server (`/api/plans/<id>/pdf`). Clients get a signed link (`/p/<token>`) that works for 60 days without a login.
+- WhatsApp opens with the message and PDF link ready. Email opens in your email app, or sends the PDF attached if `RESEND_API_KEY` is set.
+- Every message includes the app address from `APP_URL` (default https://rerise-app.onrender.com).
+
+## Claude (AI) setup
+1. Create an API key at https://console.anthropic.com
+2. On Render, add `ANTHROPIC_API_KEY` (and optionally `ANTHROPIC_MODEL`). Redeploy.
+3. You will see "Write with Claude" on Create plan, "Change with Claude" inside a plan, and "This week with Claude" on the dashboard.
+
+Claude sees age, goal and health notes only when the client has agreed to storage. It never sees names, phone numbers or emails. The dashboard briefing uses first names and counts only.
+
+See `docs/CLAUDE_PROJECT.md` for a ready-made brief to paste into a Claude Project.

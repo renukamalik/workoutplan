@@ -6,6 +6,7 @@ import type { Session } from '@/lib/auth';
 const items = [
   { href: '/dashboard', label: 'Dashboard' },
   { href: '/clients', label: 'Clients' },
+  { href: '/create', label: 'Create plan' },
   { href: '/plans', label: 'Plans' },
   { href: '/send', label: 'Send plans' },
   { href: '/admin', label: 'Admin' },
