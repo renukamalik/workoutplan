@@ -7,7 +7,7 @@ export default async function Create() {
   const templates = await q<any>(`SELECT id, title, kind FROM plans WHERE is_template ORDER BY created_at`);
   return (
     <>
-      <div><h1>Create plan</h1><p className="muted">Pick a client, start from your Rerise template or let Claude write a first draft, then edit everything, make the PDF and send it.</p></div>
+      <div><h1>Create plan</h1><p className="muted">Pick a client, start from your Rerise template or let AI write a first draft, then edit everything, make the PDF and send it.</p></div>
       <CreatePlanForm clients={clients} templates={templates} aiReady={aiReady()} />
     </>
   );

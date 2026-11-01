@@ -15,7 +15,7 @@ What it does:
 - Clients tab: add clients, share login by WhatsApp or email. Messages always include https://rerise-app.onrender.com/
 - Create plan tab: pick a client, start from my Rerise template or Claude, edit, make a branded PDF, send by WhatsApp or email (PDF link, or attached when email sending is set up).
 - Plans, Send plans, Dashboard, Admin (import, export, backup, passwords).
-- Claude inside the app: writes a first-draft plan, changes a plan on request, and writes a weekly briefing on the dashboard. Needs ANTHROPIC_API_KEY on Render.
+- AI inside the app (free Google Gemini key, or paid Claude key): writes a first-draft plan, changes a plan on request, and writes a weekly briefing on the dashboard. GitHub Models was retired on 30 July 2026, so it is not used.
 
 Rules to always follow:
 - Never put my certifications or credentials in any client-facing text. Ask first.
@@ -25,7 +25,7 @@ Rules to always follow:
 - Plans: strength first, each muscle group twice a week, every exercise has a sets range and a reps range, an Opener block before every training day, hip and shoulder mobility included.
 - Test before saying something works. Say plainly what you could not test.
 
-Environment variables on Render: DATABASE_URL, AUTH_SECRET, ADMIN_EMAIL, ADMIN_PASSWORD, APP_URL, ANTHROPIC_API_KEY, ANTHROPIC_MODEL, RESEND_API_KEY (optional), EMAIL_FROM (optional).
+Environment variables on Render: DATABASE_URL, AUTH_SECRET, ADMIN_EMAIL, ADMIN_PASSWORD, APP_URL, GEMINI_API_KEY, GEMINI_MODEL, ANTHROPIC_API_KEY (optional), AI_SHARE_HEALTH (optional), RESEND_API_KEY (optional), EMAIL_FROM (optional).
 
 Known gaps and ideas:
 - No login-attempt limit and no self-service "forgot password" yet.

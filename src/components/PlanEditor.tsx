@@ -35,10 +35,10 @@ export default function PlanEditor({ id, title: t0, kind: k0, data: d0, aiReady 
       </div>
       {aiReady && (
         <div className="card">
-          <h3>Ask Claude to change this plan</h3>
+          <h3>Ask AI to change this plan</h3>
           <div className="row">
-            <input className="in" style={{ flex: '1 1 320px' }} value={ask} onChange={(e) => setAsk(e.target.value)} aria-label="What should Claude change" placeholder="Example: swap the squat for a supported split squat on Monday and add shoulder mobility on Thursday" />
-            <button className="btn" disabled={pending || !ask.trim()} onClick={() => start(async () => { setAskMsg('Claude is working...'); const r: any = await revisePlanAction(d, ask); if (r.data) { setD(r.data); setDirty(true); setAsk(''); setAskMsg('Done. Check the changes, then press Save plan.'); } else setAskMsg(r.error); })}>Change with Claude</button>
+            <input className="in" style={{ flex: '1 1 320px' }} value={ask} onChange={(e) => setAsk(e.target.value)} aria-label="What should the AI change" placeholder="Example: swap the squat for a supported split squat on Monday and add shoulder mobility on Thursday" />
+            <button className="btn" disabled={pending || !ask.trim()} onClick={() => start(async () => { setAskMsg('AI is working...'); const r: any = await revisePlanAction(d, ask); if (r.data) { setD(r.data); setDirty(true); setAsk(''); setAskMsg('Done. Check the changes, then press Save plan.'); } else setAskMsg(r.error); })}>Change with AI</button>
           </div>
           {askMsg && <p className="small muted" role="status">{askMsg}</p>}
         </div>

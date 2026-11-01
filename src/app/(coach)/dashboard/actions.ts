@@ -3,7 +3,7 @@ import { q } from '@/lib/db';
 import { requireAdmin } from '@/lib/auth';
 import { weeklyBriefing } from '@/lib/ai';
 
-// Only first names and counts go to Claude. No health notes, phone numbers or emails.
+// Only first names and counts go to the AI. No health notes, phone numbers or emails.
 export async function briefingAction() {
   await requireAdmin();
   try {
@@ -18,5 +18,5 @@ export async function briefingAction() {
       highSymptomScoresLast14Days: pain.map((r: any) => first(r.name)), clientsWithoutAPlan: noPlan.map((r: any) => first(r.name)),
     });
     return { text };
-  } catch (e: any) { return { error: e.message || 'Claude could not write the briefing.' }; }
+  } catch (e: any) { return { error: e.message || 'The AI could not write the briefing.' }; }
 }

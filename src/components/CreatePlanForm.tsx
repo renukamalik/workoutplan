@@ -32,7 +32,7 @@ export default function CreatePlanForm({ clients, templates, aiReady }: { client
         ))}
         <label className="row" style={{ border: '1px solid var(--accent)', borderRadius: 12, padding: '8px 14px', minHeight: 44, flexWrap: 'nowrap', opacity: aiReady ? 1 : 0.6 }}>
           <input type="radio" name="src" checked={source === 'ai'} onChange={() => setSource('ai')} disabled={!aiReady} style={{ width: 20, height: 20 }} />
-          <span style={{ flex: 1 }}><b>Write with Claude</b> <span className="small muted">{aiReady ? 'a first draft for you to edit' : '(add ANTHROPIC_API_KEY on Render to turn this on)'}</span></span>
+          <span style={{ flex: 1 }}><b>Write with AI</b> <span className="small muted">{aiReady ? 'a first draft for you to edit' : '(add GEMINI_API_KEY on Render to turn this on)'}</span></span>
         </label>
       </div>
       <input type="hidden" name="source" value={source} />
@@ -44,14 +44,14 @@ export default function CreatePlanForm({ clients, templates, aiReady }: { client
             <label className="fld" style={{ flex: '1 1 160px' }}>Length
               <select name="kind" defaultValue="monthly"><option value="monthly">Monthly</option><option value="quarterly">Quarterly</option></select></label>
           </div>
-          <label className="fld">Anything Claude should know
+          <label className="fld">Anything the AI should know
             <textarea name="notes" rows={4} placeholder="Example: goal is to get stronger. Dumbbells and bands at home. Needs gentle hip hinge. No jumping." /></label>
-          <p className="small muted">Claude sees her age, goal and health notes only if she has agreed to storage. It never sees her name, phone or email.</p>
+          <p className="small muted">The AI never sees her name, phone or email. Her saved health notes are not sent to a free AI, so type any needs here in general words, for example: gentle hip hinge, no deep forward bending.</p>
         </>
       )}
       {state?.error && <p className="notice err" role="alert">{state.error}</p>}
       <div className="row">
-        <Button size="lg" className="w-full sm:w-auto" disabled={pending}><Sparkles />{pending ? (source === 'ai' ? 'Claude is writing... about a minute' : 'Creating...') : 'Create plan'}</Button>
+        <Button size="lg" className="w-full sm:w-auto" disabled={pending}><Sparkles />{pending ? (source === 'ai' ? 'AI is writing... up to a minute' : 'Creating...') : 'Create plan'}</Button>
       </div>
     </form></Card>
   );

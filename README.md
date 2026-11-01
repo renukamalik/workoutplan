@@ -34,11 +34,12 @@ With no `DATABASE_URL`, data is kept in a local folder (`.data`). Open http://lo
 - WhatsApp opens with the message and PDF link ready. Email opens in your email app, or sends the PDF attached if `RESEND_API_KEY` is set.
 - Every message includes the app address from `APP_URL` (default https://rerise-app.onrender.com).
 
-## Claude (AI) setup
-1. Create an API key at https://console.anthropic.com
-2. On Render, add `ANTHROPIC_API_KEY` (and optionally `ANTHROPIC_MODEL`). Redeploy.
-3. You will see "Write with Claude" on Create plan, "Change with Claude" inside a plan, and "This week with Claude" on the dashboard.
+## AI setup (free)
+GitHub's free model service (GitHub Models) was retired on 30 July 2026, and GitHub Copilot has no API for apps, so the app uses Google Gemini's free tier instead.
+1. Go to https://aistudio.google.com/apikey and create an API key (a Google account is enough).
+2. On Render, add `GEMINI_API_KEY`. Optionally set `GEMINI_MODEL` if Google renames the model. Redeploy.
+3. You will see "Write with AI" on Create plan, "Change with AI" inside a plan, and "This week with AI" on the dashboard.
 
-Claude sees age, goal and health notes only when the client has agreed to storage. It never sees names, phone numbers or emails. The dashboard briefing uses first names and counts only.
+Free AI services may use what you send to improve their products. So saved health notes are not sent unless you set `AI_SHARE_HEALTH=true` or use the paid Claude option (`ANTHROPIC_API_KEY`). The AI never receives names, phone numbers or emails. The dashboard briefing uses first names and counts only.
 
 See `docs/CLAUDE_PROJECT.md` for a ready-made brief to paste into a Claude Project.

@@ -44,9 +44,9 @@ export async function deletePlanAction(id: string) {
 
 export async function revisePlanAction(data: PlanData, instruction: string) {
   await requireAdmin();
-  if (!instruction.trim()) return { error: 'Tell Claude what to change.' };
+  if (!instruction.trim()) return { error: 'Tell the AI what to change.' };
   try { return { data: await revisePlan(cleanPlan(data), instruction.trim().slice(0, 1000)) }; }
-  catch (e: any) { return { error: e.message || 'Claude could not change the plan.' }; }
+  catch (e: any) { return { error: e.message || 'The AI could not change the plan.' }; }
 }
 
 export async function emailPlanPdfAction(planId: string, subject: string, message: string) {
